@@ -1,3 +1,6 @@
+/*  i'm not too sure whether i should have this in a variables file or a seperate file colled colors (which it is here...)
+ *  todo for future me below :D
+ *  TODO: think about whether or not the seperation of variables and colors is necessary */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
   font-family: sans-serif;
@@ -225,14 +228,11 @@ body {
   font-family: Roboto;
 }
 
-.text-logo {
-  background: linear-gradient(169deg, #7dcdfc, #0051ff, #993300);
-  font-family: "Bruno Ace SC";
-  font-size: 6em;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+* {
+  box-sizing: border-box;
 }
 
+/*  import any mixin directives here */
 /*!
  * Bootstrap Grid v5.3.0-alpha3 (https://getbootstrap.com/)
  * Copyright 2011-2023 The Bootstrap Authors
@@ -4323,4 +4323,54 @@ h1 {
 
 .text-center {
   text-align: center;
+}
+
+.text-logo {
+  background: linear-gradient(169deg, #447bf3, #0051ff, #101ee6);
+  font-family: "Bruno Ace SC";
+  font-size: 6em;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+input {
+  padding: 12px 14px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  background: rgb(12, 12, 12);
+  display: block;
+  width: 100%;
+  margin: 5px 0;
+}
+
+.input-label {
+  opacity: 0.8;
+  margin-bottom: 5px;
+  display: block;
+  font-size: 0.75em;
+}
+
+button {
+  padding: 12px 14px;
+  transition: 100ms ease all;
+  border: 1px solid;
+  border-radius: 5px;
+  display: block;
+  width: 100%;
+  /*  tbh it's 9:30 on a school night I am WAY too lazy to find an efficient way to do this.
+  *  TODO: find a better way to do this */
+}
+button.primary {
+  background: #447bf3;
+  border-color: #101ee6;
+}
+button.primary:hover {
+  background: #0051ff;
+}
+button.success {
+  background: #00CC22;
+  border-color: #005500;
+}
+button.success:hover {
+  background: #00AA00;
 }
