@@ -7,10 +7,10 @@ Route::group(['middleware' => ['guest']], function() {
     Route::get('/', 'LandingController@index');
 
     // Login & Register
-    Route::get('/login', 'AuthenticationController@loginIndex');
-    Route::post('/login', 'AuthenticationController@validateLogin');
-    Route::get('/register', 'AuthenticationController@registerIndex');
-    Route::post('/register', 'AuthenticationController@validateRegister');
+    Route::get('/login', 'AuthenticationController@loginIndex')->name('login');
+    Route::post('/login', 'AuthenticationController@validateLogin')->name('login.post');
+    Route::get('/register', 'AuthenticationController@registerIndex')->name('register');
+    Route::post('/register', 'AuthenticationController@validateRegister')->name('register.post');
 });
 
 // Authentication Routes
