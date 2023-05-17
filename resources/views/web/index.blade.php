@@ -17,30 +17,49 @@
     <div class="container py-5">
         <div class="row">
             <div class="col-4">
-                <h1 class="text-center">
+                <h1>
                     Dioxide
                 </h1>
             </div>
             <div class="col-4">
-                <h1 class="text-center">
+                <h1>
                     Login
                 </h1>
             </div>
             <div class="col-4">
-                <h1 class="text-center">
+                <h1>
                     Register
                 </h1>
             </div>
         </div>
         <hr>
         <div class="row">
-            <div class="col-3">
+            <div class="col-4">
                 <p>
                     A <dfn><abbr title="Free and Open Source Software">FOSS</abbr></dfn> platform powering the future of social media.
                 </p>
             </div>
-            <div class="col-3">
-                form
+            <div class="col-4">
+                <form action="{{route('login.post')}}" method="post">
+                    <input type="email" placeholder="Email Address" name="email">
+                    <input type="password" placeholder="Password" name="password">
+                    <button class="success">
+                        Login
+                    </button>
+                </form>
+            </div>
+            <div class="col-4">
+                <form action="{{route('login.post')}}" method="post">
+                    <input type="email" placeholder="Email Address" name="email">
+                    <input type="username" placeholder="Username" name="username">
+                    <label for="username" class="input-label">
+                        Displays as @username
+                    </label>
+                    <input type="password" placeholder="Password" name="password">
+                    <button class="primary">
+                        Register
+                    </button>
+                </form>
             </div>
         </div>
     </div>
